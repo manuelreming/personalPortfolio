@@ -16,8 +16,6 @@
 /* ============= VARIABLES CSS ============= */
 
 :root {
-
-  
   --header-height: 60px;
 
   /* Colores */
@@ -34,7 +32,8 @@
   --color-black: #000;
 
   /* Typografia */
-  --body-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --body-font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   --big-font-size: 32px;
   --medium-font-size: 25px;
   --normal-font-size: 16px;
@@ -58,7 +57,7 @@
   --z-fixed: 2;
 
   /* Sombras */
-  --box-shadow: 0px 10px 100px rgba(0 0 0 / .10);
+  --box-shadow: 0px 10px 100px rgba(0 0 0 / 0.1);
   --box-shadow2: 0px 10px 30px -5px rgba(0 0 0 / 0.8);
   --button-shadow: 0px 3px 10px #ee991a;
   --text-shadow: 2px 3px rgba(238 153 26 / 0.333);
@@ -135,7 +134,7 @@ img {
   outline: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     transform: translateY(-4px);
@@ -144,10 +143,8 @@ img {
 }
 
 .btn--primary {
-  background-color: var(--bg-color-buttons)
- 
+  background-color: var(--bg-color-buttons);
 }
-
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -179,83 +176,120 @@ img {
   color: #fff;
 }
 .dark-mode .btn--primary {
-  background-color: #333; 
+  background-color: #333;
 }
 
 .dark-mode .btn:hover {
-  box-shadow: 0px 3px 10px #ee991a; 
+  box-shadow: 0px 3px 10px #ee991a;
 }
 .dark-mode .header {
-  background-color: #222; 
+  background-color: #222;
 }
 
 .dark-mode .navbar__link {
-  color: #fff; 
+  color: #fff;
 }
 .dark-mode .bx {
-  color: #fff; 
+  color: #fff;
 }
 .dark-mode ::-webkit-scrollbar-thumb {
-  background-color: #666; 
+  background-color: #666;
 }
 .dark-mode .footer {
-  background-color: #222; 
-  color: #ccc; 
+  background-color: #222;
+  color: #ccc;
 }
-.dark-mode .home__container{
+.dark-mode .home__container {
   background-color: #222;
 }
-.dark-mode .home__container{
+.dark-mode .home__container {
   background-color: #222;
 }
-.dark-mode .home{
+.dark-mode .home {
   background-color: #222;
 }
 .dark-mode .nav {
   background-color: black !important;
-  color: white; 
+  color: white;
 }
-.dark-mode .navbar__menu{
+.dark-mode .navbar__menu {
   background-color: black !important;
-  color: white; 
+  color: white;
 }
-.dark-mode .header{
+.dark-mode .header {
   background-color: black !important;
-  color: white;  
+  color: white;
 }
-.dark-mode .navbar__list{
+.dark-mode .navbar__list {
   background-color: black !important;
-  color: white; 
+  color: white;
 }
 
 .dark-mode .navbar__list .navbar__link {
   color: var(--dark-text-color);
 }
 
-
 .dark-mode .navbar__list .navbar__link.active {
   color: var(--text-primary);
 }
 
 .dark-mode .header {
-  background-color: #222; 
+  background-color: #222;
 }
-
 
 .dark-mode .navbar__link i {
   color: var(--dark-text-color);
 }
 .dark-mode .navbar__logo {
-  color: var(--color-white) !important; /* Color blanco para el texto en modo oscuro */
+  color: var(--color-white) !important;
 }
 .btn.btn--primary a {
-  color: var(--color-white); 
+  color: var(--color-white);
 }
 .home__buttons a {
-  color: white ;
+  color: white;
 }
 
+.dark-mode .contact__form {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
 
+.dark-mode .contact__form-label {
+  color: var(--color-white-3);
+}
+
+.dark-mode .contact__form-input,
+.dark-mode .contact__form-textarea {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-white-2);
+}
+
+.dark-mode .contact__form-input::placeholder,
+.dark-mode .contact__form-textarea::placeholder {
+  color: var(--color-white-3);
+}
+
+.dark-mode .contact__form-button {
+  background-color: var(--bg-color-buttons);
+  color: var(--color-black);
+}
+
+.dark-mode .contact__form-button:hover {
+  box-shadow: var(--button-shadow);
+}
+.dark-mode .contact__form-label {
+  color: black;
+}
+.dark-mode .contact__info-mail a,
+.dark-mode .contact__info-number a {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+.dark-mode .contact__form-title {
+  color: var(--color-black);
+}
 
 /* ============= Header & NavBar ============= */
 .header {
@@ -278,7 +312,7 @@ img {
     .navbar__logo {
       display: flex;
       align-items: center;
-      column-gap: .25rem;
+      column-gap: 0.25rem;
       font-weight: var(--font-semi-bold);
       color: var(--primary-color);
     }
@@ -301,12 +335,13 @@ img {
           display: block;
           background-color: var(--color-white-1);
           border-radius: 20px;
-          box-shadow: inset 0px 2px 5px rgb(0 0 0 / 0.4), inset 0px -2px 5px rgb(255 255 255 / 0.4);
+          box-shadow: inset 0px 2px 5px rgb(0 0 0 / 0.4),
+            inset 0px -2px 5px rgb(255 255 255 / 0.4);
           cursor: pointer;
-          transition: .3s;
+          transition: 0.3s;
 
           &::after {
-            content: '';
+            content: "";
             width: 16px;
             height: 16px;
             position: absolute;
@@ -315,7 +350,7 @@ img {
             background: linear-gradient(180deg, #ffcc89, #d8860b);
             border-radius: 20px;
             box-shadow: 0px 5px 10px rgb(0 0 0 / 0.2);
-            transition: .3s;
+            transition: 0.3s;
           }
 
           &:active::after {
@@ -331,22 +366,21 @@ img {
             &.navbar__toggle--darkmode-sun {
               left: 3px;
               color: var(--color-white);
-              transition: .3s;
+              transition: 0.3s;
             }
 
             &.navbar__toggle--darkmode-moon {
               right: 2px;
               color: #7e7e7e;
-              transition: .3s;
+              transition: 0.3s;
             }
           }
-
         }
 
         .navbar__toggle--darkmode-input {
           visibility: hidden;
 
-          &:checked+label {
+          &:checked + label {
             background: #242424;
 
             &::after {
@@ -362,10 +396,8 @@ img {
             .bx-moon {
               color: var(--color-white);
             }
-
           }
         }
-
       }
 
       /* language  */
@@ -381,12 +413,13 @@ img {
           display: block;
           background-color: var(--color-white-1);
           border-radius: 20px;
-          box-shadow: inset 0px 2px 5px rgb(0 0 0 / 0.4), inset 0px -2px 5px rgb(255 255 255 / 0.4);
+          box-shadow: inset 0px 2px 5px rgb(0 0 0 / 0.4),
+            inset 0px -2px 5px rgb(255 255 255 / 0.4);
           cursor: pointer;
-          transition: .3s;
+          transition: 0.3s;
 
           &::after {
-            content: '';
+            content: "";
             width: 16px;
             height: 16px;
             position: absolute;
@@ -397,23 +430,21 @@ img {
             background-repeat: no-repeat;
             border-radius: 50%;
             box-shadow: 0px 5px 10px rgb(0 0 0 / 0.2);
-            transition: .3s;
+            transition: 0.3s;
           }
         }
 
         .navbar__toggle--language-input {
           visibility: hidden;
 
-          &:checked+label {
-
+          &:checked + label {
             &::after {
               left: 40px;
               transform: translateX(-100%);
-              background-image: url(../img/reino-unido.png)
+              background-image: url(../img/reino-unido.png);
             }
           }
         }
-
       }
     }
   }
@@ -436,7 +467,7 @@ img {
   background-color: var(--color-white);
   box-shadow: 0px 1px 9px 2px #00000024;
   padding: 4.5rem 1rem 2rem;
-  transition: .6s;
+  transition: 0.6s;
   z-index: var(--z-fixed);
 
   &:target {
@@ -466,7 +497,7 @@ img {
 .navbar__logo i {
   font-size: 2.2rem;
   color: var(--primary-color);
-  transition: background .3s;
+  transition: background 0.3s;
 }
 
 .btn__open:hover {
@@ -490,7 +521,7 @@ img {
     color: var(--primary-color);
     font-size: 1.1rem;
     font-weight: var(--font-semi-bold);
-    transition: color .3s;
+    transition: color 0.3s;
 
     &:hover {
       color: var(--text-primary);
@@ -587,19 +618,16 @@ img {
       .home__social-link {
         color: #777;
         font-size: 1.7rem;
-        transition: color .3s;
+        transition: color 0.3s;
         text-align: center;
 
         &:hover {
-
           color: var(--primary-color);
         }
-
       }
     }
 
     .home__info {
-
       .home__title,
       .home__description {
         text-align: center;
@@ -613,9 +641,8 @@ img {
         white-space: nowrap;
         width: 15ch;
         animation: typing 2s infinite steps(15) alternate,
-          blink .3s infinite step-end alternate;
+          blink 0.3s infinite step-end alternate;
         overflow: hidden;
-
       }
     }
 
@@ -623,14 +650,12 @@ img {
       text-align: center;
     }
   }
-
 }
 
 @keyframes typing {
   from {
     width: 0;
   }
-
 }
 
 @keyframes blink {
@@ -677,7 +702,6 @@ img {
 
   .skills__container {
     .skills__wrapper {
-
       width: 100%;
       display: flex;
       justify-content: center;
@@ -696,7 +720,7 @@ img {
           overflow: hidden;
           margin: 10px 0;
           box-shadow: var(--box-shadow2);
-          transition: .6s cubic-bezier(.28, -0.03, 0, .99);
+          transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -730,8 +754,8 @@ img {
               overflow: hidden;
               opacity: 0;
               transform: translateY(30px);
-              transition-delay: .3s;
-              transition: all .3s ease;
+              transition-delay: 0.3s;
+              transition: all 0.3s ease;
               color: var(--color-white);
 
               .skills__card-title {
@@ -743,15 +767,13 @@ img {
                 text-align: center;
               }
             }
-
           }
-
         }
 
         .skills__input {
           display: none;
 
-          &:checked+label {
+          &:checked + label {
             height: 1500px;
 
             .skills__description {
@@ -778,7 +800,7 @@ img {
 
       .skills__tag {
         display: inline-block;
-        padding: .75rem 1.5rem;
+        padding: 0.75rem 1.5rem;
         font-weight: var(--font-semi-bold);
         font-size: var(--smaller-font-size);
         background-color: var(--color-black);
@@ -786,7 +808,6 @@ img {
         border-radius: 5px;
       }
     }
-
   }
 }
 
@@ -813,7 +834,6 @@ img {
           animation: showing linear both;
           animation-timeline: view();
           animation-range: entry 25% cover 35%;
-
         }
       }
 
@@ -826,7 +846,7 @@ img {
           gap: 1rem;
 
           .projects__button {
-            padding: .75rem 1.5rem;
+            padding: 0.75rem 1.5rem;
             font-size: var(--smaller-font-size);
           }
         }
@@ -922,7 +942,7 @@ img {
 
         .footer__social-link {
           color: var(--color-white);
-          transition: text-shadow .3s;
+          transition: text-shadow 0.3s;
 
           &:hover {
             text-shadow: var(--text-shadow);
@@ -1036,7 +1056,7 @@ img {
         flex-direction: row;
 
         .about__card {
-          transition: transform .2s;
+          transition: transform 0.2s;
 
           &:nth-child(1) {
             transform: rotate(-8deg);
@@ -1077,7 +1097,7 @@ img {
           }
 
           .skills__input {
-            &:checked+label {
+            &:checked + label {
               height: 500px;
               width: 300px;
             }
@@ -1117,7 +1137,7 @@ img {
 
   .contact {
     .contact__container {
-      grid-template-columns: .5fr 1fr;
+      grid-template-columns: 0.5fr 1fr;
     }
   }
 
@@ -1135,7 +1155,7 @@ img {
       .skills__wrapper {
         .skills__cards {
           .skills__input {
-            &:checked+label {
+            &:checked + label {
               width: 600px;
             }
           }
@@ -1148,4 +1168,3 @@ img {
     margin: 0 auto;
   }
 }
-
